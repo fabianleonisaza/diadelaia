@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - Día de la IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .tech-button {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .tech-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+        }
+        .activity-detail {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .activity-detail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+        }
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-robot text-2xl text-cyan-400"></i>
+                    <span class="text-xl font-bold">Día de la IA</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+                    <a href="actividades.html" class="text-cyan-400">Actividades</a>
+                    <a href="#lectura" class="hover:text-cyan-400 transition-colors">Lectura</a>
+                    <a href="#manifiesto" class="hover:text-cyan-400 transition-colors">Manifiesto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 text-center">
+        <div class="floating-animation mb-8">
+            <i class="fas fa-tasks text-8xl text-cyan-400 mb-6"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+            <span class="bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+                Actividades Detalladas
+            </span>
+        </h1>
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-300">
+            Explora cada actividad del Día de la IA con instrucciones completas y recursos
+        </p>
+    </section>
+
+    <!-- Actividad 1: Lectura Reflexiva -->
+    <section id="lectura" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="activity-detail">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-book text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold">Actividad 1: Lectura Reflexiva</h2>
+                        <p class="text-blue-400 text-lg">¿Quién controla realmente la IA?</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-cyan-400">Propósito</h3>
+                        <p class="text-gray-300 mb-6">
+                            Comprender el papel humano en el control de la IA y sus implicaciones éticas. 
+                            Cada estudiante o grupo realizará la lectura reflexiva para generar análisis crítico 
+                            orientado a las preguntas clave sobre el uso responsable de la tecnología.
+                        </p>
+
+                        <h3 class="text-2xl font-bold mb-6 text-pink-400">Preguntas de Reflexión</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-question-circle text-yellow-400 mr-3 mt-1"></i>
+                                <span>¿Qué riesgos se mencionan en la lectura?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-question-circle text-yellow-400 mr-3 mt-1"></i>
+                                <span>¿Qué decisiones dependen de las personas?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-question-circle text-yellow-400 mr-3 mt-1"></i>
+                                <span>¿Cómo se relaciona esto con la vida escolar?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-question-circle text-yellow-400 mr-3 mt-1"></i>
+                                <span>¿Cuándo la IA es aliada del aprendizaje?</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-green-400">La Lectura</h3>
+                        <div class="bg-gray-800 rounded-lg p-6 text-gray-300 leading-relaxed">
+                            <p class="mb-4">
+                                La inteligencia artificial (IA) está cada vez más presente en la vida cotidiana: 
+                                desde las recomendaciones en plataformas digitales hasta las respuestas automáticas 
+                                en dispositivos móviles.
+                            </p>
+                            <p class="mb-4">
+                                Aunque puede parecer que la IA actúa por cuenta propia, en realidad aprende a partir 
+                                de los datos que recibe y de los patrones generados por las acciones humanas. 
+                                <span class="text-cyan-400 font-semibold">Por ello, es fundamental recordar que el control sobre sus decisiones sigue siendo responsabilidad de las personas.</span>
+                            </p>
+                            <p class="mb-4">
+                                El riesgo surge cuando se utiliza la IA sin una reflexión crítica. Si se permite que 
+                                esta tecnología influya en decisiones importantes sin verificar la información que ofrece, 
+                                pueden reproducirse errores, prejuicios o manipulaciones.
+                            </p>
+                            <p class="mb-4">
+                                <span class="text-pink-400 font-semibold">El uso responsable de la IA implica cuestionar sus resultados, evaluar sus impactos y promover valores éticos en su aplicación.</span> 
+                                El pensamiento creativo y el juicio crítico son herramientas esenciales para garantizar 
+                                que la tecnología contribuya al bienestar colectivo.
+                            </p>
+                            <p>
+                                En el contexto escolar, por ejemplo, la IA puede ayudar a resolver tareas, traducir textos 
+                                o generar ideas. Sin embargo, si se usa sin criterio, puede fomentar la dependencia, 
+                                el plagio o la desinformación. Por eso, es importante que cada estudiante aprenda a reconocer 
+                                cuándo la IA está siendo una aliada del aprendizaje y cuándo está reemplazando el esfuerzo personal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3">
+                            <i class="fas fa-lightbulb mr-2 text-yellow-400"></i>
+                            Reflexión Final
+                        </h4>
+                        <p class="text-lg">
+                            "Usar la tecnología con inteligencia significa saber cuándo confiar, cuándo dudar y, 
+                            sobre todo, cuándo asumir la responsabilidad de lo que se crea, se comparte y se decide."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifiesto Section -->
+    <section id="manifiesto" class="py-20 px-4 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <i class="fas fa-scroll text-6xl text-yellow-400 mb-6"></i>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                        Nuestro Manifiesto
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    Tu voz importa en la construcción de un futuro donde humanos e IA colaboremos éticamente
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="activity-detail">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">
+                        <i class="fas fa-bullhorn mr-3"></i>
+                        Guía para tu Reflexión
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <h4 class="font-bold text-lg mb-2 text-pink-400">¿Qué representa tu imagen?</h4>
+                            <p class="text-gray-300">Describe la situación que elegiste y cómo la representaste visualmente.</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <h4 class="font-bold text-lg mb-2 text-green-400">¿Qué decisión humana se destaca?</h4>
+                            <p class="text-gray-300">Identifica el momento clave donde los humanos deben intervenir o decidir.</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <h4 class="font-bold text-lg mb-2 text-yellow-400">¿Qué principio se vulnera o se promueve?</h4>
+                            <p class="text-gray-300">Reflexiona sobre los valores: crítico, creativo, ético, responsable.</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <h4 class="font-bold text-lg mb-2 text-purple-400">¿Qué compromiso deberíamos asumir?</h4>
+                            <p class="text-gray-300">Como comunidad educativa, ¿qué acciones podríamos tomar?</p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <h4 class="font-bold text-lg mb-2 text-orange-400">¿Qué aprendiste?</h4>
+                            <p class="text-gray-300">¿Qué nueva comprensión surgió sobre el rol humano frente a la IA?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-detail">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">
+                        <i class="fas fa-pen mr-3"></i>
+                        Ejemplos de Frases para el Manifiesto
+                    </h3>
+
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-lg">
+                            <p class="font-semibold">
+                                "En nuestra institución, promovemos el uso de la IA como herramienta para aprender, 
+                                no para reemplazar el esfuerzo ni la ética."
+                            </p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-green-500 to-teal-600 p-4 rounded-lg">
+                            <p class="font-semibold">
+                                "Creemos que la tecnología debe servir para construir un mundo más justo, 
+                                no para perpetuar desigualdades."
+                            </p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-pink-500 to-red-600 p-4 rounded-lg">
+                            <p class="font-semibold">
+                                "Comprometidos a usar la IA con responsabilidad, cuestionando siempre 
+                                sus resultados y protegiendo nuestros valores humanos."
+                            </p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-yellow-500 to-orange-600 p-4 rounded-lg">
+                            <p class="font-semibold">
+                                "La creatividad humana guiada por principios éticos es el norte que 
+                                dirige nuestro uso de la inteligencia artificial."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <button onclick="openPadlet()" class="tech-button px-8 py-4 rounded-lg font-bold text-lg">
+                            <i class="fas fa-share mr-2"></i>
+                            Compartir en Padlet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-8">
+                <i class="fas fa-robot text-4xl text-cyan-400 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">¿Quién manda aquí?</h3>
+                <p class="text-gray-400">Tú o la IA - Día de la Inteligencia Artificial</p>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500">
+                    © 2024 Colegio Público de Floridablanca Santander Colombia
+                </p>
+                <p class="text-gray-600 mt-2">
+                    Construyendo juntos un futuro ético con IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openPadlet() {
+            window.open('https://padlet.com/fabianleonisaza/d-a-de-la-ia-manifiesto-institucional-kky2elf6n47r6pzs', '_blank');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all activity details for animation
+        document.querySelectorAll('.activity-detail').forEach(detail => {
+            detail.style.opacity = '0';
+            detail.style.transform = 'translateY(30px)';
+            detail.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(detail);
+        });
+    </script>
+</body>
+</html>

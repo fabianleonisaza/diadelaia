@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Día de la IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .tech-button {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .tech-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+        }
+        .resource-card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+        }
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-robot text-2xl text-cyan-400"></i>
+                    <span class="text-xl font-bold">Día de la IA</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+                    <a href="actividades.html" class="hover:text-cyan-400 transition-colors">Actividades</a>
+                    <a href="recursos.html" class="text-cyan-400">Recursos</a>
+                    <a href="#herramientas" class="hover:text-cyan-400 transition-colors">Herramientas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 text-center">
+        <div class="floating-animation mb-8">
+            <i class="fas fa-toolbox text-8xl text-cyan-400 mb-6"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+            <span class="bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+                Recursos y Herramientas
+            </span>
+        </h1>
+        <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-300 mb-8">
+            Todo lo que necesitas para participar en el Día de la IA
+        </p>
+        <div class="pulse-animation">
+            <i class="fas fa-download text-4xl text-green-400"></i>
+        </div>
+    </section>
+
+    <!-- Herramientas Principales -->
+    <section id="herramientas" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <i class="fas fa-tools mr-4 text-yellow-400"></i>
+                Herramientas de Creación
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reve -->
+                <div class="resource-card text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-magic text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Reve</h3>
+                    <p class="text-gray-300 mb-6">
+                        Crea imágenes impresionantes con IA de forma sencilla y rápida. 
+                        Perfecto para principiantes que quieren resultados profesionales.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-star text-yellow-400 mr-2"></i>
+                            <span>Interfaz intuitiva</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-clock text-green-400 mr-2"></i>
+                            <span>Resultados rápidos</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-graduation-cap text-blue-400 mr-2"></i>
+                            <span>Ideal para estudiantes</span>
+                        </div>
+                    </div>
+                    <button onclick="openTool('reve')" class="tech-button w-full py-3 rounded-lg font-bold">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Abrir Reve
+                    </button>
+                </div>
+
+                <!-- Raphael -->
+                <div class="resource-card text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-paint-brush text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Raphael</h3>
+                    <p class="text-gray-300 mb-6">
+                        Diseño artístico con inteligencia artificial avanzada. 
+                        Crea obras únicas con estilos personalizados.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-palette text-purple-400 mr-2"></i>
+                            <span>Estilos artísticos</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-cog text-orange-400 mr-2"></i>
+                            <span>Controles avanzados</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-trophy text-yellow-400 mr-2"></i>
+                            <span>Resultados únicos</span>
+                        </div>
+                    </div>
+                    <button onclick="openTool('raphael')" class="tech-button w-full py-3 rounded-lg font-bold">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Abrir Raphael
+                    </button>
+                </div>
+
+                <!-- Leonardo -->
+                <div class="resource-card text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-robot text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Leonardo</h3>
+                    <p class="text-gray-300 mb-6">
+                        Generación profesional de imágenes con modelos avanzados. 
+                        Para usuarios que buscan máxima calidad.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-crown text-yellow-400 mr-2"></i>
+                            <span>Alta calidad</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-sliders-h text-blue-400 mr-2"></i>
+                            <span>Control total</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-rocket text-red-400 mr-2"></i>
+                            <span>Tecnología punta</span>
+                        </div>
+                    </div>
+                    <button onclick="openTool('leonardo')" class="tech-button w-full py-3 rounded-lg font-bold">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Abrir Leonardo
+                    </button>
+                </div>
+
+                <!-- Copilot -->
+                <div class="resource-card text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Copilot</h3>
+                    <p class="text-gray-300 mb-6">
+                        Asistente de IA de Microsoft para crear y diseñar. 
+                        Integrado con las herramientas que ya usas.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-link text-green-400 mr-2"></i>
+                            <span>Integración total</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-shield-alt text-blue-400 mr-2"></i>
+                            <span>Seguridad empresarial</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-users text-purple-400 mr-2"></i>
+                            <span>Colaboración</span>
+                        </div>
+                    </div>
+                    <button onclick="openTool('copilot')" class="tech-button w-full py-3 rounded-lg font-bold">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Abrir Copilot
+                    </button>
+                </div>
+
+                <!-- ChatGPT -->
+                <div class="resource-card text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-comment text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">ChatGPT</h3>
+                    <p class="text-gray-300 mb-6">
+                        El asistente de IA más avanzado para crear descripciones, 
+                        obtener ideas y mejorar tus prompts.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                            <span>Creatividad ilimitada</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-comments text-blue-400 mr-2"></i>
+                            <span>Conversación natural</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-graduation-cap text-green-400 mr-2"></i>
+                            <span>Aprendizaje continuo</span>
+                        </div>
+                    </div>
+                    <button onclick="openTool('chatgpt')" class="tech-button w-full py-3 rounded-lg font-bold">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Abrir ChatGPT
+                    </button>
+                </div>
+
+                <!-- Padlet -->
+                <div class="resource-card text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-teal-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-sticky-note text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Padlet</h3>
+                    <p class="text-gray-300 mb-6">
+                        Nuestro muro colaborativo para compartir reflexiones, 
+                        imágenes y construir juntos el manifiesto.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-users text-blue-400 mr-2"></i>
+                            <span>Colaboración en tiempo real</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-image text-purple-400 mr-2"></i>
+                            <span>Comparte imágenes</span>
+                        </div>
+                        <div class="flex items-center justify-center text-sm text-gray-400">
+                            <i class="fas fa-heart text-red-400 mr-2"></i>
+                            <span>Construcción comunitaria</span>
+                        </div>
+                    </div>
+                    <button onclick="openTool('padlet')" class="tech-button w-full py-3 rounded-lg font-bold">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Abrir Padlet
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompts Avanzados -->
+    <section class="py-20 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <i class="fas fa-lightbulb mr-4 text-yellow-400"></i>
+                Prompts Avanzados para Crear
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="resource-card">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">
+                        <i class="fas fa-eye mr-2"></i>
+                        Representación Visual
+                    </h3>
+                    <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-gray-400 mb-2">Prompt base:</p>
+                        <p class="text-white font-mono text-sm">
+                            "Representa visualmente la siguiente situación: [situación asignada], 
+                            mostrando cómo interviene la inteligencia artificial y qué papel 
+                            juega el ser humano en esa situación. Usa símbolos, expresiones 
+                            o elementos que reflejen si el uso de la IA es ético o problemático."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-400">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Perfecto para mostrar claramente la interacción humano-IA
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <h3 class="text-2xl font-bold mb-6 text-pink-400">
+                        <i class="fas fa-book-open mr-2"></i>
+                        Estilo Historieta
+                    </h3>
+                    <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-gray-400 mb-2">Prompt base:</p>
+                        <p class="text-white font-mono text-sm">
+                            "Crea una imagen que ilustre la siguiente situación: [situación asignada] 
+                            como si fuera parte de una historieta. Incluye personajes, emociones y 
+                            un entorno que ayude a entender el impacto social de la IA en esa escena."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-400">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Ideal para contar una historia visual completa
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">
+                        <i class="fas fa-balance-scale mr-2"></i>
+                        Conflicto y Tensión
+                    </h3>
+                    <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-gray-400 mb-2">Prompt base:</p>
+                        <p class="text-white font-mono text-sm">
+                            "Diseña una imagen inspirada en la siguiente situación: [situación asignada], 
+                            destacando el conflicto entre el control humano y el poder de la inteligencia 
+                            artificial. ¿Quién toma la decisión? ¿Quién debería hacerlo? Representa esa tensión visualmente."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-400">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Para explorar los dilemas éticos más profundos
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        Metáfora Visual
+                    </h3>
+                    <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-gray-400 mb-2">Prompt base:</p>
+                        <p class="text-white font-mono text-sm">
+                            "Transforma la siguiente situación: [situación asignada] en una metáfora visual. 
+                            Usa objetos, colores o escenarios que simbolicen el uso crítico, creativo, 
+                            ético o irresponsable de la IA. Tu imagen debe invitar a reflexionar."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-400">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Para expresiones artísticas más abstractas y simbólicas
+                    </div>
+                </div>
+
+                <div class="resource-card md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6 text-purple-400">
+                        <i class="fas fa-school mr-2"></i>
+                        En Tu Comunidad
+                    </h3>
+                    <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                        <p class="text-sm text-gray-400 mb-2">Prompt base:</p>
+                        <p class="text-white font-mono text-sm">
+                            "Imagina que la siguiente situación: [situación asignada] ocurre en tu colegio o comunidad. 
+                            Crea una imagen que muestre cómo reaccionarían las personas, qué consecuencias tendría 
+                            y qué decisiones éticas deberían tomarse frente al uso de la IA."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-400">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Conecta la situación con tu realidad diaria y las decisiones que tomarías tú
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips y Mejores Prácticas -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <i class="fas fa-star mr-4 text-yellow-400"></i>
+                Tips para Crear Mejores Imágenes
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="resource-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sé Específico</h3>
+                    <p class="text-gray-300">
+                        Cuanto más detalles incluyas en tu descripción, mejor será el resultado. 
+                        Describe colores, emociones, estilo artístico y elementos clave.
+                    </p>
+                </div>
+
+                <div class="resource-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Experimenta con Estilos</h3>
+                    <p class="text-gray-300">
+                        Prueba diferentes estilos artísticos: realista, caricatura, anime, 
+                        pintura al óleo, cómic, etc. Cada estilo cuenta una historia diferente.
+                    </p>
+                </div>
+
+                <div class="resource-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Reflexiona antes de Crear</h3>
+                    <p class="text-gray-300">
+                        Antes de escribir el prompt, piensa en el mensaje que quieres transmitir. 
+                        ¿Qué emoción quieres evocar? ¿Qué idea quieres comunicar?
+                    </p>
+                </div>
+
+                <div class="resource-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Incluye Personajes</h3>
+                    <p class="text-gray-300">
+                        Las imágenes con personas son más impactantes. Describe sus emociones, 
+                        acciones y expresiones faciales para crear conexión.
+                    </p>
+                </div>
+
+                <div class="resource-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-balance-scale text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Muestra el Conflicto</h3>
+                    <p class="text-gray-300">
+                        Si tu situación tiene un dilema ético, representa visualmente esa tensión. 
+                        Usa contraste de colores, expresiones y composición.
+                    </p>
+                </div>
+
+                <div class="resource-card text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-redo text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Itera y Mejora</h3>
+                    <p class="text-gray-300">
+                        No te conformes con el primer resultado. Ajusta tu prompt, 
+                        prueba diferentes herramientas y refina hasta obtener lo que buscas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-8">
+                <i class="fas fa-robot text-4xl text-cyan-400 mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">¿Quién manda aquí?</h3>
+                <p class="text-gray-400">Tú o la IA - Día de la Inteligencia Artificial</p>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500">
+                    © 2024 Colegio Público de Floridablanca Santander Colombia
+                </p>
+                <p class="text-gray-600 mt-2">
+                    Recursos para un uso ético y creativo de la IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTool(tool) {
+            const urls = {
+                'reve': 'https://app.reve.com/home',
+                'raphael': 'https://raphael.app/es',
+                'leonardo': 'https://app.leonardo.ai/',
+                'copilot': 'https://copilot.microsoft.com/',
+                'chatgpt': 'https://chatgpt.com/',
+                'padlet': 'https://padlet.com/fabianleonisaza/d-a-de-la-ia-manifiesto-institucional-kky2elf6n47r6pzs'
+            };
+            
+            if (urls[tool]) {
+                window.open(urls[tool], '_blank');
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all resource cards for animation
+        document.querySelectorAll('.resource-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
